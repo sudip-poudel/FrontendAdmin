@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ADMIN_AUTHENTICATED_API } from "../http/AXIOSAPI";
+import { ADMIN_AUTHENTICATED_API } from "../http/AxiosAPI";
 import { STATUS } from "./Status";
 
 

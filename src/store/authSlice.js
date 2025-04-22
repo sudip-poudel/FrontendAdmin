@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { STATUS } from "./Status";
-import { ADMIN_API, ADMIN_AUTHENTICATED_API } from "../http/AXIOSAPI";
+import { ADMIN_API, ADMIN_AUTHENTICATED_API } from "../http/AxiosAPI";
 
 
 const authSlice = createSlice({
