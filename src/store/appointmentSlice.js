@@ -89,3 +89,35 @@ export function updateAppointmentService(id, formData){
         }
     }
 }
+
+export function getAppointments(){
+    return async function getAppointmentsListThunk(dispatch){
+        try {
+            const response = await ADMIN_AUTHENTICATED_API.get('/appointments')
+            if (response.status == 200) {
+                dispatch(setStatus(STATUS.SUCCESS))
+                dispatch(setAppointmentsList(response.data.bookings))
+            }
+        } catch (error) {
+            dispatch(setStatus(STATUS.ERROR))
+            dispatch(setAlertData(error.response.data.message))
+        }
+    }
+}
+
+export function deleteAppointment(id){
+    return async function deleteAppointmentThunk(dispatch){
+        try {
+            console.log(id,"fshdlkfjslkdj")
+            const response = await ADMIN_AUTHENTICATED_API.delete(`/appointments/${id}`)
+            if(response.status == 200){
+                dispatch(setAppointmentsList(response.data.bookings))
+                dispatch(setStatus(STATUS.SUCCESS))
+                dispatch(setAlertData(response.data.message))
+            }
+        } catch (error) {
+            dispatch(setStatus(STATUS.ERROR))
+            dispatch(setAlertData(error.response.data.message))
+        }
+    }
+}

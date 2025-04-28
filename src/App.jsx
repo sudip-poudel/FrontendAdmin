@@ -20,6 +20,8 @@ import EditService from './pages/Services/EditServices';
 import AppointmentService from './pages/Appointment Service/AppointmentService';
 import AddAppointmentService from './pages/Appointment Service/AddAppointmentService';
 import EditAppointmentService from './pages/Appointment Service/EditAppointmentService';
+import Appointments from './pages/Appointments/Appointments';
+import Payments from './pages/payment/Payments';
 
 function App() {
   return (
@@ -28,7 +30,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
-          
+
           <Route path='/staff' element={<Staff />} />
           <Route path='/add-staff' element={<AddStaff />} />
           <Route path='/edit-staff/:id' element={<EditStaff />} />
@@ -43,13 +45,16 @@ function App() {
           <Route path='/add-branch' element={<AddBranches />} />
           <Route path='/edit-branch/:id' element={<EditBranch />} />
 
-          <Route path='/services' element={<Services/>}/>
-          <Route path='/add-service' element={<AddServices/>}/>
-          <Route path='/edit-service/:id' element={<EditService/>}/>
+          <Route path='/services' element={<Services />} />
+          <Route path='/add-service' element={<AddServices />} />
+          <Route path='/edit-service/:id' element={<EditService />} />
 
-          <Route path='/appointment-service' element={<AppointmentService/>}/>
-          <Route path='/add-appointment-service' element={<AddAppointmentService/>}/>
-          <Route path='/edit-appointment-service/:id' element={<EditAppointmentService/>}/>
+          <Route path='/appointment-service' element={<AppointmentService />} />
+          <Route path='/add-appointment-service' element={<AddAppointmentService />} />
+          <Route path='/edit-appointment-service/:id' element={<EditAppointmentService />} />
+
+          <Route path='/appointments' element={<Appointments />} />
+          <Route path='/payments' element={<Payments />} />
 
 
         </Routes>
