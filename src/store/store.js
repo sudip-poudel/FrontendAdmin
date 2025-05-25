@@ -6,6 +6,7 @@ import branchSlice from './branchSlice'
 import serviceSlice from './serviceSlice'
 import appointmentSlice from './appointmentSlice'
 import paymentSlice from './paymentSlice'
+import dashboardSlice from './dashboardSlice'
 
 
 export const store = configureStore({
@@ -16,7 +17,8 @@ export const store = configureStore({
     branchData : branchSlice,
     serviceData : serviceSlice,
     appointmentData : appointmentSlice,
-    paymentData : paymentSlice
+    paymentData : paymentSlice,
+    dashboardData : dashboardSlice,
   },
 })
 

@@ -136,7 +136,7 @@ function AddServices() {
                         for="duration"
                         class="text-xl font-medium text-gray-900 block mb-2"
                       >
-                        Duration
+                        Duration(Hours)
                       </label>
                       <input
                         type="text"
@@ -145,7 +145,7 @@ function AddServices() {
                         name="duration"
                         id="duration"
                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
-                        placeholder="2 - 4 Hours"
+                        placeholder="2  Hours"
                         required
                       />
                     </div>
